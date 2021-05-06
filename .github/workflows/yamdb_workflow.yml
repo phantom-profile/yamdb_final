@@ -58,9 +58,9 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }} # если ваш ssh-ключ защищен паролем
           script: |
-            sudo docker pull phantom8profile/yamdb-final
-            sudo docker-compose stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 phantom8profile/yamdb-final
+            sudo docker-compose pull phantom8profile/yamdb-final
+            sudo docker-compose stop $(sudo docker-compose ps -a -q)
+            sudo docker-compose run --rm -d -p 5000:5000 phantom8profile/yamdb-final
 
   send_message:
     runs-on: ubuntu-latest
