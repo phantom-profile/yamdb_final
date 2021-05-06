@@ -60,7 +60,7 @@ jobs:
           script: | #при замене команды docker на docker-compose происходит ошибка
             cd docker_files
             sudo docker pull phantom8profile/yamdb-final
-            docker-compose rm -f $(docker-compose ps -aq)
+            sudo docker-compose rm -f $(docker-compose ps -aq)
             sudo docker-compose up -d --build
 
   send_message:
