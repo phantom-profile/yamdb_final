@@ -62,8 +62,8 @@ jobs:
             sudo docker pull phantom8profile/yamdb-final
             sudo docker-compose stop
             sudo docker-compose up -d --build
-            docker-compose exec -T web python manage.py migrate --noinput
-            docker-compose exec -T web python manage.py collectstatic --no-input
+            sudo docker-compose exec -T web python manage.py migrate --noinput
+            sudo docker-compose exec -T web python manage.py collectstatic --no-input
 
   send_message:
     runs-on: ubuntu-latest
