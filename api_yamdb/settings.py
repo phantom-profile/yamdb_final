@@ -100,6 +100,10 @@ REST_FRAMEWORK = {
     ]
 }
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'api_yamdb/static'),
+]
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
