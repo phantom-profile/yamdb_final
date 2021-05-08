@@ -130,3 +130,4 @@ JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY')
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=9999)
 }
+
